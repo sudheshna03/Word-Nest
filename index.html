@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Nest Dictionary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Auth Screen -->
+  <div class="frame" id="auth-screen">
+    <h1>Welcome to <span class="highlight">Happy Nest</span></h1>
+    <p>Login or Sign Up to continue</p>
+    <button class="next-btn" onclick="showLogin()">Login</button>
+    <button class="next-btn" onclick="showSignup()">Sign Up</button>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="frame hidden" id="login-screen">
+    <h2>Login</h2>
+    <input type="text" id="login-username" placeholder="Username" />
+    <input type="password" id="login-password" placeholder="Password" />
+    <div class="btn-row">
+      <button class="next-btn" onclick="authScreenBack()">Back</button>
+      <button class="next-btn" onclick="login()">Login</button>
+    </div>
+  </div>
+
+  <!-- Signup Screen -->
+  <div class="frame hidden" id="signup-screen">
+    <h2>Sign Up</h2>
+    <input type="text" id="signup-username" placeholder="Choose Username" />
+    <input type="email" id="signup-email" placeholder="Enter Gmail" />
+    <input type="tel" id="signup-phone" placeholder="Enter Phone Number" />
+    <input type="password" id="signup-password" placeholder="Choose Password" />
+    <input type="password" id="signup-repassword" placeholder="Re-enter Password" />
+    <div class="btn-row">
+      <button class="next-btn" onclick="authScreenBack()">Back</button>
+      <button class="next-btn" onclick="signup()">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Welcome Screen -->
+  <div class="frame hidden" id="welcome-screen">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" class="logo" />
+    <h1>Hello! Welcome to <span class="highlight">Happy Nest</span></h1>
+    <button class="next-btn" onclick="showDictionary()">Next</button>
+  </div>
+
+  <!-- Dictionary App Screen -->
+  <div class="frame hidden" id="dictionary-screen">
+    <div class="container">
+      <div class="top-bar">
+        <button class="logout-btn" onclick="logout()">Logout</button>
+        <button class="next-btn" onclick="showTeam()">Our Team</button>
+      </div>
+      <h1>Dictionary</h1>
+      <form id="search-box" class="search-box">
+        <input type="text" id="search-input" placeholder="Search a word" />
+        <button type="submit">🔍</button>
+      </form>
+      <p class="errTxt"></p>
+
+      <div class="word-details">
+        <div class="word-info">
+          <div class="word-name">
+            <h2 id="word-txt">play</h2>
+            <p><span id="type-txt">noun </span> <span id="phonetic-txt">/pleɪ/</span></p>
+          </div>
+          <button type="button" id="sound-btn">🔊</button>
+        </div>
+        <p class="definition" id="definition-txt">Activity for amusement only.</p>
+        <div class="blockquote" id="example-elem">
+          <h3>Examples</h3>
+          <p>Children learn through play.</p>
+        </div>
+        <div class="blockquote" id="synonyms-elem">
+          <h3>Synonyms</h3>
+          <p>play</p>
+        </div>
+        <div class="blockquote" id="antonyms-elem">
+          <h3>Antonyms</h3>
+          <p>some word</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Team Screen -->
+  <div class="frame hidden" id="team-screen">
+    <h2>Our Team</h2>
+    <ul>
+      <li><span class="highlight">23501A05I1</span> (T. Sudheshna Devi)</li>
+      <li><span class="highlight">23501A05D5</span> (P. Nandini)</li>
+      <li><span class="highlight">24505A0513</span> (N. Bhagya Sri)</li>
+      <li><span class="highlight">23501A05J4</span> (Y. Nihar)</li>
+      <li><span class="highlight">23501A05J2</span> (Y. Bhashitha)</li>
+      <li><span class="highlight">23501A05H4</span> (T. Anu)</li>
+    </ul>
+    <button class="next-btn" onclick="showDictionary()">Back</button>
+  </div>
+
+  <!-- Thank You Screen -->
+  <div class="frame hidden" id="thankyou-screen">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Logo" class="logo" />
+    <h1>Thank You Very Much <br /> For Choosing <span class="highlight">Happy Nest</span>!</h1>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
