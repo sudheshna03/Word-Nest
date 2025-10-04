@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cce5ff, #e6f0ff);
+  background-image: url('https://www.shutterstock.com/shutterstock/videos/3576520755/thumb/1.jpg?ip=x480');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.frame {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.hidden { display: none; }
+.highlight { color: #0099ff; }
+
+input {
+  display: block;
+  width: 90%;
+  padding: 12px;
+  margin: 15px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.next-btn, .logout-btn {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  background: #0099ff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.logout-btn { float: right; margin: 0 0 20px 0; }
+
+.logo { width: 80px; margin-bottom: 20px; }
+
+.word-details { text-align: left; margin-top: 20px; }
+
+.blockquote {
+  background: #f0f8ff;
+  border-left: 4px solid #0099ff;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.search-box input { flex: 1; }
